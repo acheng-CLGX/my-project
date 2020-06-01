@@ -24,5 +24,5 @@ FROM (Select distinct fips5, substr(fips5,1,2) as StateFIPS
 	ON A.fips5 = Appraisal.fips5
 	LEFT JOIN `clgx-surveillance-sbx-f577.acheng.DisclosureState` as State
 	ON A.StateFIPS = State.FIPS
-ORDER by A.fips5 DESC
+ORDER by A.fips5 ASC
 ------
